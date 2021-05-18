@@ -8,14 +8,12 @@ import org.springframework.web.bind.annotation.*;
 public class ApiController {
 
     @CrossOrigin
-    @ResponseBody
     @GetMapping(value = "/swaggerGet")
     public ResponseEntity<?> swaggerTest() {
         return ResponseEntity.ok().body("Swagger for Get call working fine");
     }
 
     @CrossOrigin
-    @ResponseBody
     @PostMapping(value = "/swaggerPost")
     public ResponseEntity<?> swaggerPost(@RequestParam(value = "test",required = false) String test) {
         return ResponseEntity.ok().body("Swagger for Post call working fine : "+ test);
